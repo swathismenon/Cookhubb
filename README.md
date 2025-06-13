@@ -29,7 +29,7 @@ A web application where users can explore, share, and manage food recipes. It's 
    
    ```bash
    git clone https://github.com/swathismenon/Cookhubb.git
-   cd FOODRECIPE
+   cd Cookhubb
  
    
 
@@ -66,7 +66,7 @@ npm run dev
 5. **Run the Frontend**
   ```bash
 cd ../frontend
-npm start
+npm run dev
 ```
   
 
