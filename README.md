@@ -86,11 +86,20 @@ npm start
 
 -SEO-friendly practices include meaningful page titles, structured content, and descriptive metadata for better indexing.
 
-## TRACKING
-Google Analytics 4 (GA4) is implemented using the react-ga4 library.
+## Tracking and Analytics
+This application uses Google Analytics (GA4) to track anonymous usage data.
 
-### Why Tracking Was Implemented:
-Tracking was added to measure user engagement, page views, and form submissions. The goal is to understand user behavior and improve the app's features based on actual usage patterns. GA4 was chosen for its ability to capture detailed, event-based analytics while being easy to integrate with React.
+**What is being tracked:**
+Page visits, navigation patterns, session duration, and general interaction events within the app — all anonymized and non-personal.
+
+**Why tracking is implemented:**
+The primary goal is to understand how users interact with the application. This insight helps identify popular features, drop-off points, and overall engagement. With this data, I can make informed design and UX decisions to improve the app over time.
+
+**Why Google Analytics:**
+I chose GA4 for its seamless integration with Vite + React, its real-time dashboard, and minimal performance overhead. It’s widely adopted and GDPR-compliant when configured properly.
+
+**Privacy Considerations:**
+No personal data is collected or stored. Users are not profiled or tracked across different sites. The data collected is strictly for internal usage analytics.
 
 ## SECURITY
 CookHub includes several security features to protect user data:
