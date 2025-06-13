@@ -1,95 +1,121 @@
-COOKHUB a web application where users can explore, share, and manage food recipes. It's built using the MERN stack (MongoDB, Express.js, React.js, Node.js).
+# COOKHUB
 
-TECH STACK
+A web application where users can explore, share, and manage food recipes. It's built using the MERN stack (MongoDB, Express.js, React.js, Node.js).
 
-Frontend: React.js (for building the user interface)
+---
 
-Backend: Node.js & Express.js (for handling server requests)
+## TECH STACK
 
-Database: MongoDB (to store recipes and user info)
+- **Frontend:** React.js (for building the user interface)
+- **Backend:** Node.js & Express.js (for handling server requests)
+- **Database:** MongoDB (to store recipes and user info)
+- **Authentication:** JWT (for secure login) and bcrypt (for password hashing)
 
-Authentication: JWT (for secure login) and bcrypt (for password hashing)
+---
 
-USERS CAN : 
+## USERS CAN:
 
-View recipes.
+- View recipes
+- Add new recipes
+- Edit and delete existing recipes
+- Favorite recipes
+- Create an account and log in to save their own recipes
 
-Add new recipes.
+---
 
-Edit and delete existing recipes.
+## HOW TO RUN:
 
-Favorite recipes.
+1. **Clone the Repository**
+   
+   ```bash
+   git clone https://github.com/swathismenon/Cookhubb.git
+   cd FOODRECIPE
+ 
+   
 
-Create an account and log in to save their own recipes.
+2. **Set Up Environment Variables**
 
-HOW TO RUN:
+Create a .env file in the root of the project directory and add the following:
 
-1. Clone the Repository
-git clone https://github.com/swathismenon/Cookhubb.git
-cd FOODRECIPE
-
-3. Set Up Environment Variables
-Create a .env file in the root of the project directory and add the following environment variables:
+```bash
 PORT=5000
 CONNECTION_STRING=mongodb://localhost:27017/foodRecipe
-SECRET_KEY="FED12345"
+SECRET_KEY=FED12345
+```
 
-MONGODB_URI: Connection string for MongoDB (can be a local or cloud MongoDB instance).
-
-JWT_SECRET: A secret key for signing JWT tokens (you can generate a random secret).
-
-PORT: The port number the server will listen on (default is 5000).
-
-
-3. Install Dependencies
-Navigate to the root project folder (FOODRECIPE) and install the backend dependencies:
-
-cd backend
-npm install
-
-Install frontend dependencies:
+3. **Install Dependencies**
+  
+   # Backend
+   ```bash
+   cd backend
+   npm install
 
 
+# Frontend
+```bash
 cd ../frontend
 npm install
+```
 
-4. Running the Backend
-Navigate to the backend folder and start the server:
-
+4.**Run the Backend**
+```bash
 cd backend
 npm run dev
-This will start the server on the port specified in the .env file (default 5000).
+```
 
-5. Running the Frontend
-In another terminal window, navigate to the frontend folder and start the React development server:
-
+5. **Run the Frontend**
+  ```bash
 cd ../frontend
 npm start
+```
+  
 
 
-TRACKING
-Google Analytics is set up for the frontend to track page views and form submissions. The react-ga4 library is used to track events, including user interactions and page views.
+## ACCESSIBILITY & SEO
+-Accessibility (a11y) and SEO were considered in the development of CookHub to ensure usability and discoverability:
 
-SECURITY
-CookHub implements several security features to protect user data:
+-Semantic HTML is used across the application to enhance screen reader support.
 
-PASSWORD HASHING
-bcrypt is used to securely hash user passwords before storing them in the database.
+-Input fields are accompanied by properly associated labels, improving usability for screen reader and keyboard users.
 
-AUTHENTICATION
-JWT (JSON Web Tokens) is used to authenticate users securely.
+-Keyboard navigation is supported for all interactive elements like forms and buttons.
 
-Users must log in to access and modify data.
+-Contrast ratios for text and buttons are being verified and adjusted to meet WCAG 2.1 AA guidelines (minimum 4.5:1 for text).
 
-However, there are some known security issues that still need to be addressed:
+-Alt text is used on all images to support users who rely on screen readers.
 
-CURRENT SECURITY THREATS : 
+-SEO-friendly practices include meaningful page titles, structured content, and descriptive metadata for better indexing.
 
-Storing Sensitive Information in Cookies: The app currently stores important user information (e.g., user ID) in cookies. If an attacker gains access to these cookies, they could misuse that information.
+## TRACKING
+Google Analytics 4 (GA4) is implemented using the react-ga4 library.
 
-Cookies Are Not Secure: Cookies don’t have additional security measures, such as being encrypted or marked as HTTP-only, which means that malicious actors could read them.
+### Why Tracking Was Implemented:
+Tracking was added to measure user engagement, page views, and form submissions. The goal is to understand user behavior and improve the app's features based on actual usage patterns. GA4 was chosen for its ability to capture detailed, event-based analytics while being easy to integrate with React.
 
-Storing Sensitive Data in Local Storage: Authentication tokens and other sensitive data are stored in local storage, which is not secure. If an attacker executes malicious JavaScript on the page, they could access this data.
+## SECURITY
+CookHub includes several security features to protect user data:
+
+### Password Hashing
+User passwords are hashed using bcrypt before being stored in the database.
+
+### Authentication
+JSON Web Tokens (JWT) are used for secure user authentication.
+
+Only authenticated users can access and modify recipes.
+
+### Known Security Concerns
+Sensitive Data in Cookies: Currently stores user ID in cookies without encryption.
+
+Cookies Not Marked HTTP-only/Secure: Makes them accessible to client-side scripts.
+
+Local Storage Risks: Tokens are stored in localStorage, which is vulnerable to XSS attacks.
+
+These issues are noted for future improvement.
+
+
+
+
+
 
 
 
