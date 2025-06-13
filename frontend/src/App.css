@@ -187,11 +187,11 @@ li a:hover {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 10;
-  padding: 1.5rem; /* slightly reduced padding */
+  padding: 1.5rem; 
   width: 90%;
   max-width: 420px;
-  max-height: 80vh; /* NEW: restrict height */
-  overflow-y: auto; /* NEW: enable scroll if needed */
+  max-height: 80vh; 
+  overflow-y: auto; 
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
@@ -225,6 +225,7 @@ li a:hover {
 .form-control {
   display: flex;
   flex-direction: column;
+  
 }
 
 .form-control label {
@@ -400,6 +401,12 @@ p {
 p:hover {
   color: #0c3b25;
   text-decoration: none;
+}
+.icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
 }
 
 /* ---------- Responsive Design ---------- */
